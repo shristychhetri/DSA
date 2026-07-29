@@ -28,6 +28,9 @@ class Solution {
                 }
                 else{
                     row.add(prev.get(j) + prev.get(j - 1));
+                  /* Without prev
+row.add(result.get(i - 1).get(j - 1)
+      + result.get(i - 1).get(j));*/
                     }
                 }
             
