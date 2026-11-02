@@ -30,3 +30,23 @@ class Solution{
     return maximumProfit;
   }
 }
+
+
+//another way of doing it
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        int minPrice = prices[0];
+        int profit = 0;
+        int maxProfit = 0;
+        for(int i =0; i<prices.length;i++){
+          //checking if today  price can give  us better profit then previous one
+            profit = prices[i] - minPrice;
+            maxProfit = Math.max(profit, maxProfit);
+          //if current price is minimum so update the minPrice (which is buying price)
+          minPrice = Math.min(prices[i], minPrice);
+          
+        }
+        return maxProfit;
+    }
+}
